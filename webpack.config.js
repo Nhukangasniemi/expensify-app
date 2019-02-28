@@ -22,6 +22,8 @@ module.exports = {
   }, 
   devtool: 'cheap-module-eval-source-map', //help to debug and show bugs in source code
   devServer: { //same like live-server but have webpack feature
-    contentBase: path.join(__dirname, 'public') 
+    contentBase: path.join(__dirname, 'public'),
+    historyApiFallback: true, //Tell the server that we will handle routing via client side code and it should return index.html page
+    //Browser router will be responsible for which component to show up
   }
 };
